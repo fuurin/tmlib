@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" 
+	content="width=device-width, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<title>start tmlib.js</title>
+
+	<script 
+	src="http://cdn.rawgit.com/phi-jp/tmlib.js/0.3.0/build/tmlib.js">
+	</script>
+
+	<script>
+	// TODO:コードを書いていく
+	tm.main(function() {
+		//アプリケーションインスタンスを生成,キャンバスのIDを発行。
+		//これをボディに張り付けると動く。
+		//多分デフォルトで300×150
+		var app = tm.display.CanvasApp("#world");
+
+		//スターインスタンスを生成してシーンに追加
+		//デフォルトで黄色
+		var star = tm.display.StarShape().addChildTo(app.currentScene);
+
+		//位置をセット：setPositionメソッドで、位置を決定
+		star.setPosition(0, 75);
+
+		//更新処理：displayクラスには。画面更新の度に実行されるupdateメソッドがある。
+		star.update = function()
+		{
+			this.rotation += 8;
+		};
+
+		//実行：何をしてるのかは分からない
+		app.run();
+	})
+	</script>
+</head>
+
+<body>
+	<canvas id = "world"></canvas>
+</body>
+</html>
