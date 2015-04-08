@@ -10,19 +10,19 @@
 		//スターを生成
 		var star = tm.display.StarShape().addChildTo(app.currentScene);
 
-		//真ん中にセット
-		star.setPosition(320, 480);
-
 		//ラベル
 		var label1 = tm.display.Label("Hello, world!").addChildTo(app.currentScene);
 		var label2 = tm.display.Label("Touch me!").addChildTo(app.currentScene);
+
+		//真ん中にセット
+		star.setPosition(320, 480);
 
 		//ラベル位置指定:文字列の中心位置の座標を指定
 		//デフォルトで縦20、横は文字による
 		label1.setPosition(320, 880);
 		label2.setPosition(320, 900);
 
-		//更新処理
+		//更新処理,キャンバスのインスタンスを渡して、ポイントされているところを取得
 		app.currentScene.update = function(app)
 		{
 			//ローテーションを使って回す
