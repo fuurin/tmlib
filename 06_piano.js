@@ -46,5 +46,5 @@ tm.preload(function(){
 
 //main関数
 tm.main(function() {
-	tm.sound.SoundManager.get().play();
+	tm.sound.SoundManager.get("C4").play();
 });
