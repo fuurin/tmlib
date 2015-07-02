@@ -16,6 +16,7 @@ tm.define("MainScene", {
         var loader = tm.asset.Loader();
         loader.onload = this._init.bind(this);
         //　ローカルのサウンドは使えない！？
+        // Chrome→Firefoxで解決,AWS上ならChromeでも大丈夫
         //loader.load({ "sample": "http://phi-jp.github.io/tmlib.simple.js/assets/touch.wav", });
         loader.load({"sample": "./resource/piano/C3.wav"})
     },

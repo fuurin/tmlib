@@ -6,6 +6,12 @@
  * Copyright (C) 2010 phi, http://tmlife.net
  */
 
+ /*
+ * ユーザ変更
+ * 19292:pannerを生成可能にするべくコメントアウトを解除
+ *
+ */
+
 (function() { "use strict"; })();
 
 /*
@@ -19283,7 +19289,7 @@ tm.sound = tm.sound || {};
         _setup: function() {
             this.source     = this.context.createBufferSource();
             this.gainNode   = this.context.createGain();
-            // this.panner     = this.context.createPanner();
+            this.panner     = this.context.createPanner();
             this.analyser   = this.context.createAnalyser();
 
             this.source.connect(this.gainNode);
