@@ -2,10 +2,6 @@ var SCREEN_WIDTH    = 640;              // スクリーン幅
 var SCREEN_HEIGHT   = 960;              // スクリーン高さ
 var SCREEN_CENTER_X = SCREEN_WIDTH/2;   // スクリーン幅の半分
 var SCREEN_CENTER_Y = SCREEN_HEIGHT/2;  // スクリーン高さの半分
-var ASSETS = {
-    "player": "http://jsrun.it/assets/s/A/3/j/sA3jL.png",
-    "bg": "http://jsrun.it/assets/a/G/5/Y/aG5YD.png",
-};
 
 
 tm.define("MainScene", {
@@ -18,6 +14,8 @@ tm.define("MainScene", {
         //　ローカルのサウンドは使えない！？
         // Chrome→Firefoxで解決,AWS上ならChromeでも大丈夫
         //loader.load({ "sample": "http://phi-jp.github.io/tmlib.simple.js/assets/touch.wav", });
+
+        // 音量が下がっていく！？
         loader.load({"sample": "./resource/piano/C3.wav"})
     },
     _init: function() {
